@@ -33,7 +33,7 @@ public class Vuelo {
 		this.nombre="Vuelo-G"+Double.toString((int) (Math.random() * 9999) + 1000);
 	}
 	public void Imprimir() {
-		System.out.println(nombre+"\t\t"+hora);
+		System.out.println(nombre+"\t\t\t\t"+hora);
 		System.out.println("\tSalida: "+puerto1.nombre);
 		System.out.println("\tLlegada: "+puerto2.nombre);
 		System.out.print("\tPiloto: ");
@@ -41,5 +41,8 @@ public class Vuelo {
 		System.out.print("\tAciento: "+asiento+"\tAvion: ");
 		avion.Imprimir();
 		System.out.println();
+	}
+	public void ImprimirV() {
+		System.out.println(nombre+"\t\t\t\t"+hora);
 	}
 }

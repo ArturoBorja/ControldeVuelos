@@ -24,15 +24,16 @@ public class Pasajero extends Persona {
 	}
 	public void Imprimir() {
 		if(this.sexo) {
-			System.out.print("(M) ");
+			System.out.print("(M)\t\t\t");
 		}else {
-			System.out.print("(F) ");
+			System.out.print("(F)\t\t\t");
 		}
 		super.Imprimir();
-		System.out.println();
+		System.out.println("\n");
 		for(Vuelo a :vuelos) {
 			a.Imprimir();
 		}
+		System.out.println("\n");
 	}
 }
 	

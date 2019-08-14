@@ -12,7 +12,7 @@ public class Aeropuerto {
 		switch (dado) {
 		case 1:
 			this.ciudad = "Lima";
-			dado=0;
+			this.dado=(int) (Math.random() * 1+0) ;
 			break;
 		case 2:
 			this.ciudad = "New York";
@@ -31,12 +31,12 @@ public class Aeropuerto {
 			this.dado=(int) (Math.random() * 3) + 1;
 			break;
 		case 6:
-			this.ciudad = "Londres";
+			this.ciudad = "London";
 			this.dado=(int) (Math.random() * 3) + 1;
 			break;
 		default:
 			this.ciudad = "Bogota";
-			dado=0;
+			this.dado=(int) (Math.random() * 1+0) ;
 			break;
 		}
 		switch (dado) {
@@ -44,10 +44,10 @@ public class Aeropuerto {
 			this.nombre = "Aeropuerto Internacional de "+ciudad;
 			break;
 		case 1:
-			this.nombre = "International Airport of "+ciudad;
+			this.nombre = "Private International Airport of "+ciudad;
 			break;
 		case 2:
-			this.nombre = "Private International Airport of "+ciudad;
+			this.nombre = "International Airport of "+ciudad;
 			break;
 		default:
 			this.nombre = "State International Airport of "+ciudad;
@@ -60,11 +60,12 @@ public class Aeropuerto {
 		System.out.println(nombre);
 		System.out.println("Vuelos Entrantes:");
 		for(Vuelo a : vuelosin) {
-			a.Imprimir();
+			a.ImprimirV();
 		}
 		System.out.println("Vuelos Salientes:");
 		for(Vuelo a : vuelosout) {
-			a.Imprimir();
+			a.ImprimirV();
 		}
+		System.out.println();
 	}
 }

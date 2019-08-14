@@ -1,20 +1,28 @@
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
 public class Main {
 
 	public static void main(String[] args) {
 		List<Aeropuerto> puertos =new ArrayList<Aeropuerto>();
 		List<Pasajero> pasajeros =new ArrayList<Pasajero>();
-		for(int a=0; a<4;a++) {
+		for(int a=0; a<10;a++) {
 			Aeropuerto a1=new Aeropuerto();
-			puertos.add(a1);
+			boolean b1=true;
+			for(int b=0;b<puertos.size();b++) {
+				if(puertos.get(b).nombre.equals(a1.nombre)) {
+					b1=false;
+					a--;
+					break;
+				}
+			}
+			if(b1) {
+				puertos.add(a1);
+			}
 		}
 //		for(Aeropuerto a : puertos) {
 //			a.Imprimir();
 //		}
-		for(int a=0; a<6;a++) {
+		for(int a=0; a<20;a++) {
 			Pasajero a1=new Pasajero(puertos);
 			pasajeros.add(a1);
 		}
