@@ -15,10 +15,12 @@ public class Vuelo {
 		int a3;
 		ms = 1565771200000L + (Math.abs(new Random().nextLong()) % (1L * 180 * 24 * 60 * 60 * 1000));
 		this.hora = new Date(ms);
-		a2=(int) Math.random() * puertos.size() + 1;
-		this.puerto1=puertos.get(a2-1);
+		a2=((int) (Math.random() * puertos.size()) + 1);
+		a2--;
+		this.puerto1=puertos.get(a2);
 		do {
-			a3=(int) Math.random() * puertos.size() + 1;
+			a3=((int) (Math.random() * puertos.size()) + 1);
+			a3--;
 		}while(a3==a2);
 		this.puerto2=puertos.get(a3);
 		puerto1.vuelosout.add(this);
